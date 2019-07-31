@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron" style="margin-top: 10px">
+        <h1>Num 2 Word</h1>
+        <p class="lead">Convert Roman Numerals into Numbers in Words</p>
+    </div>*@
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-10" ng-controller="ctrl">
+        <form ng-submit="formSubmit()">
+            <div class="form-group">
+                <label for="PersonName">Name</label>
+                <input type="text" class="form-control" maxlength="50" id="PersonName" placeholder="Please Enter a Name" ng-model="PersonName">
+            </div>
+            <div class="form-group">
+                <label for="Number">Number</label>
+                <input type="number" class="form-control" id="Number" placeholder="Please Enter a number" ng-model="Number">
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+        <p>
+            <h3>{{OutputPersonName}}</h3>
+        </p>
+        <p>
+            <h3>{{NumberInWords}}</h3>
+        </p>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <p></p>
+    </div>
+    <div class="col-md-1"></div>
+</div>

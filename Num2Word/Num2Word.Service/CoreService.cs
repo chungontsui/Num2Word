@@ -217,20 +217,6 @@ namespace Num2Word.Service
 
         }
 
-        //public string ConvertNumToWord(int num, string separator)
-        //{ 
-        //    int _temp num
-
-        //    string strNum = num.ToString();
-
-        //    string strOnes = strNum.Substring(strNum.Length - 1, 1);
-
-        //    for(int i = 1; i < num.ToString().Length; i++)
-        //    {
-
-        //    }
-        //}
-
         public bool DoesNumHasTwoDecimalPlace(double num)
         {
             bool result = true;
