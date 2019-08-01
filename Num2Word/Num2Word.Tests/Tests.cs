@@ -1,4 +1,4 @@
-﻿using Num2Word.Service;
+﻿using Num2Word.Services;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

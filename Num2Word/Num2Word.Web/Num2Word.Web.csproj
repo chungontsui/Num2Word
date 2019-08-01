@@ -987,9 +987,9 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Num2Word.Service\Num2Word.Service.csproj">
-      <Project>{420e81ed-e2b0-4e51-9915-696472f39866}</Project>
-      <Name>Num2Word.Service</Name>
+    <ProjectReference Include="..\Num2Word.Services\Num2Word.Services.csproj">
+      <Project>{6917994d-f2b1-48da-a9c8-fe3d8a74c6d2}</Project>
+      <Name>Num2Word.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

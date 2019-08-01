@@ -2,31 +2,43 @@
 
 main.controller("ctrl", ['$scope', '$http', function ($scope, $http) {
     $scope.test = "Chung";
+    $scope.showError = false;
+    $scope.errorMsg = "Number must be between than 0 and 1000";
+    $scope.NumberInputClass = "form-group"; 
 
     $scope.formSubmit = function () {
 
         $scope.showError = false;
+        $scope.NumberInputClass = "form-group";
+        $scope.OutputPersonName = "";
+        $scope.NumberInWords = "";
+        $scope.ErrorMessage = "";
+
+        if ($scope.Number > 999 || $scope.Number < 1)
+        {
+            $scope.NumberInputClass = "form-group has-error";
+            $scope.showError = true;
+            return;
+        }
+
 
         var req = {
-            method: 'POST',
-            url: "../api/Values/GetNumWord",
+            method: 'GET',
+            url: "../api/Values/?number=" + $scope.Number,
             headers: {
                 'Content-Type': 'application/json'
-            },
-            data: {
-                number: $scope.Number
             }
         };
 
         $http(req).then(
             function (response) {
                 //success
-                $scope.NumberInWords = response;
+                $scope.OutputPersonName = $scope.PersonName
+                $scope.NumberInWords = response.data;
             },
             function (error) {
                 //error
-                $scope.returnedMessage = error.data;
-                $scope.showError = true;
+                $scope.ErrorMessage = error.data.ExceptionMessage;
             });
     }
 }]);

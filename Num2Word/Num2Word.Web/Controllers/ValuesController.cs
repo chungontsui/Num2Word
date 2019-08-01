@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Num2Word.Service;
+using Num2Word.Services;
 
 namespace Num2Word.Web.Controllers
 {
@@ -24,8 +24,8 @@ namespace Num2Word.Web.Controllers
         }
 
         // GET api/<controller>/5
-        [Route("api/Values/{number}")]
-        public string Get(double number)
+        //[Route("api/Values/{number}")]
+        public string Get([FromUri] double number)
         {
             return cs.Convert(number);
         }
