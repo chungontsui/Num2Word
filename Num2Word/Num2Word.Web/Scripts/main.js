@@ -14,7 +14,7 @@ main.controller("ctrl", ['$scope', '$http', function ($scope, $http) {
         $scope.NumberInWords = "";
         $scope.ErrorMessage = "";
 
-        if ($scope.Number > 999 || $scope.Number < 1)
+        if ($scope.Number > 999 || $scope.Number <= 0)
         {
             $scope.NumberInputClass = "form-group has-error";
             $scope.showError = true;
