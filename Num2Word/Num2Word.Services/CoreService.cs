@@ -110,7 +110,7 @@ namespace Num2Word.Services
             Only accept number needs to be less than a thousand and greater than 0
             */
 
-            if (num <= 0 || num > 999)
+            if (num <= 0 || num > 999.99)
                 throw new Exception("Input Number can must be greater than 0 and smaller than 1000");
 
             int leftSideOfDecimal = 0, rightSideOfDecimal = 0;
