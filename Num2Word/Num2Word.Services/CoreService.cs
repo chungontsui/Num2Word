@@ -122,7 +122,7 @@ namespace Num2Word.Services
             string strCents = string.Empty;
             string strDollars = string.Empty;
 
-            if (num.ToString().Contains("."))
+            if (num.ToString().Contains(".")) //check if number has a decimal place
             {
                 //if number has over 2 decimal place, throw
                 if (!DoesNumHasTwoDecimalPlace(num))
@@ -214,8 +214,6 @@ namespace Num2Word.Services
             }
 
             return finalResult;
-
-            //hundreds = strDollars.
 
         }
 

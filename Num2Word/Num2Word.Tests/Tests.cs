@@ -60,29 +60,5 @@ namespace Num2Word.Tests
             Assert.That(cs.ConvertTensToWords(tens, concat).Equals(expectResult));
         }
 
-        //public void Test_ConvertNumToWord()
-        //{
-        //    int num = 1;
-
-        //    string strNum = num.ToString(); 
-        //    string strNumPart = string.Empty;
-        //    string[] strNumPartWord = new string[3];
-
-        //    string result = string.Empty;
-
-        //    //string strOnes = strNum.Substring(strNum.Length - 1, 1);
-
-        //    for (int i = 0; i < strNum.Length; i++)
-        //    {
-        //        strNumPart = strNum.Substring((strNum.Length - 1 - i), 1);
-        //        strNumPartWord[i] = cs.ReturnNumWord(int.Parse(strNumPart) * Convert.ToInt16(Math.Pow(10, i)));
-        //        result += strNumPartWord;
-        //    }
-
-        //    if(!string.IsNullOrEmpty(strNumPartWord[2]))
-        //    {
-        //        result = 
-        //    }
-        //}
     }
 }

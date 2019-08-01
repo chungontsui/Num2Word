@@ -17,19 +17,4 @@ namespace Num2Word.Web.Controllers
 
     }
 
-    public class ValueController: ApiController
-    {
-        private CoreService cs;
-
-        public ValueController()
-        {
-            cs = new CoreService();
-        }
-
-        [System.Web.Mvc.HttpGet, System.Web.Mvc.Route("api/Value/{number}")]
-        public string Get(double number)
-        {
-            return cs.Convert(number);
-        }
-    }
 }
